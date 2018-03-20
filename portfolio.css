@@ -188,6 +188,7 @@
     .workbox {
         border: 1px solid;
         padding: 0;
+        margin-bottom:0;
         height: 300px;
         overflow: hidden;
         box-sizing: border-box;

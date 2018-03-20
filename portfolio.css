@@ -1,0 +1,470 @@
+    /* resetting browser styles   */
+    
+    * {
+        margin-top: 2px;
+        padding: 0;
+        border-radius: 5px;
+        border-color: lime !important;
+    }
+    /* using CSS Grid on container div to layout the page */
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 70%;
+        grid-template-areas: "hd hd  hd hd" " ar ar ar ar" "wk wk wk wk ";
+        grid-gap: 10px;
+        border: 1px solid;
+        margin-left: auto;
+        margin-right: auto;
+        /* box-shadow: 5px 5px #aeb3ad; */
+    }
+    
+    .container>* {
+        width: 99%;
+        margin: 0 auto 0 auto;
+    }
+    /* styleing and assinging grid areas to all the elements */
+    
+    header {
+        grid-area: hd;
+        border: 1px solid #333;
+        background: rgba(03, 03, 03, 0.9)url("./images/portfoliobg.jpg");
+        background-size: cover;
+        margin-top: 10px !important;
+        width: 100%;
+        height: 18.75rem;
+        text-align: center;
+        text-shadow: 2px 1px lawngreen;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    /* Navbar hover effect  */
+    
+    .btn:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.0);
+        transform: scale(1.03);
+        border: 1px solid lime;
+        background: rgba(135, 255, 20, .7);
+    }
+    
+    .current {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.03);
+        border: 1px solid lime;
+        background: rgba(135, 255, 20, .7);
+    }
+    
+    .centered {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(241, 248, 241);
+        letter-spacing: 0.1em;
+    }
+    
+    .centered2 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(241, 248, 241);
+        letter-spacing: 0.1em;
+    }
+    
+    .navbar {
+        grid-area: navbar;
+        text-align: center;
+        padding: 5px;
+        color: #333;
+        width: 85%;
+        margin: -3.125rem auto;
+    }
+    /* Fontawsome icons used as navbar buttons */
+    
+    .navbar .btn {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: inline-block;
+        font-size: 22px;
+        color: #f9f0eb;
+        border: 1px solid;
+        padding: 8px 12px;
+        transform: translate(-135%, 0%);
+    }
+    /* fontawsome spinner icon improvised as the site logo */
+    
+    .logo {
+        top: 30px;
+        margin-left: 50px;
+        color: lime;
+        float: left;
+        font-size: 75px;
+        transform: translate(-100%, -20%);
+    }
+    
+    article {
+        grid-area: ar;
+        height: 200px;
+        width: 99.9%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "p1 p1 p2 p2";
+    }
+    
+    #p1 {
+        grid-area: p1;
+    }
+    
+    #p2 {
+        grid-area: p2;
+    }
+    
+    .para {
+        font-size: 16px !important;
+    }
+    
+    .info {
+        padding: 20px;
+        box-sizing: border-box;
+        flex-basis: 49.0%;
+        text-align: center;
+        overflow: hidden;
+        text-shadow: 1px 1px 1px black;
+        border: 1px solid;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: rgb(10, 10, 10);
+        opacity: 0.5;
+    }
+    
+    .info>h1 {
+        padding: 10px;
+        margin: 5px;
+    }
+    /* Using nested grid on the following div to structure the project showcase */
+    
+    .showcase {
+        grid-area: wk;
+        height: 18.75rem;
+        display: grid;
+        grid-template-areas: "b1 b2 b3 b4 " "b5 b5 b5 b5 ";
+        grid-gap: 10px;
+    }
+    
+    #b1 {
+        grid-area: b1;
+    }
+    
+    #b2 {
+        grid-area: b3;
+    }
+    
+    #b3 {
+        grid-area: b2;
+    }
+    
+    #b4 {
+        grid-area: b4;
+    }
+    
+    #b5 {
+        grid-area: b5;
+        cursor: pointer;
+        height: 80px !important;
+        width: 100%;
+        margin-bottom: 5px;
+        text-shadow: 1px 1px 1px black;
+        background-color: rgba(50, 205, 050, 0.2);
+        /* background-color: rgb(184, 176, 176); */
+        border: 2px solid;
+        box-shadow: inset 0 2px rgba(102, 98, 98, 0.3), inset 0 10px rgba(255, 255, 255, .2), inset 0 10px 20px rgba(255, 255, 255, .25), inset 0 -15px 30px rgba(255, 255, 255, .3);
+        color: limegreen;
+        opacity: 0.4;
+        text-align: center;
+    }
+    /* photbox styling */
+    
+    .workbox {
+        border: 1px solid;
+        padding: 0;
+        height: 300px;
+        overflow: hidden;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .size {
+        height: 100%;
+        object-fit: fill;
+        object-position: center center;
+    }
+    /* photobox animation */
+    
+    .overlay {
+        position: relative;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(50, 205, 050, 0.8);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 5s ease;
+    }
+    
+    .workbox:hover .overlay {
+        bottom: 0;
+        height: 100%;
+    }
+    /* styleing the test in animation */
+    
+    .text {
+        color: white;
+        font-size: 20px;
+        position: relative;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+    
+    .footer {
+        cursor: pointer;
+        bottom: 0;
+        max-height: 150px;
+        margin-top: 10px;
+        text-shadow: 1px 1px 1px black;
+        border: 2px solid;
+        box-shadow: inset 0 2px rgba(102, 98, 98, 0.3), inset 0 10px rgba(255, 255, 255, .2), inset 0 10px 20px rgba(255, 255, 255, .25), inset 0 -15px 30px rgba(255, 255, 255, .3);
+        background: rgba(50, 250, 50, 0.3);
+        opacity: 0.5;
+    }
+    /* Using CSS Flexbox to horizontally align the items within the footer element */
+    
+    .contact {
+        display: flex;
+    }
+    
+    .fa-facebook {
+        color: rgb(66, 103, 178);
+    }
+    
+    .fa-twitter {
+        color: rgb(29, 161, 242);
+    }
+    
+    .social {
+        flex-basis: 20%;
+        color: #000;
+        font-size: 50px;
+        margin: auto;
+    }
+    
+    .social:nth-child(even) {
+        background: #c9c6c5;
+        flex-basis: 80%;
+        font-size: 22px;
+    }
+    /* ------------------------------Responsive---------------------- */
+    /* //////////////////////---------------NEXUS 5X TO IPAD--------////////////////////////// */
+    
+    @media screen and (max-width: 768px) and (min-width: 415px) {
+        .container {
+            min-width: 99.9%;
+            min-height: 99.9%;
+            border: none;
+            box-shadow: none;
+            grid-template-areas: "hd hd  hd hd" " ar ar ar ar" "wk wk wk wk ";
+        }
+        .container>* {
+            width: 99.9%;
+        }
+        .banner {
+            grid-area: hd;
+            border: 1px solid #333;
+            background: rgba(03, 03, 03, 0.5)url("./images/portfoliobg.jpg");
+            background-size: cover;
+            margin-top: 10px !important;
+            width: 100%;
+            height: 13.75rem;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .navbar {
+            grid-area: navbar;
+            text-align: center;
+            padding: 5px;
+            color: #333;
+            width: 85%;
+            margin: -6.125rem auto;
+        }
+        .logo {
+            transform: translate(-135%, -10%);
+            font-size: 60px;
+        }
+        .centered2 {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(241, 248, 241);
+            letter-spacing: 0.1em;
+        }
+        .showcase {
+            margin-top: 250px !important;
+            grid-template-areas: "b1 b1 b2 b2" "b3 b3 b4 b4""b5 b5 b5 b5";
+            grid-gap: 20px;
+        }
+        .workbox {
+            height: 400px;
+            margin: 10px 0 5px 0;
+        }
+        .size {
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            object-position: center center;
+        }
+        article {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: "p1" "p2";
+        }
+        .info {
+            height: 200px;
+            margin-top: 15px;
+        }
+        #b5 {
+            cursor: pointer;
+            max-height: 150px !important;
+            width: 100%;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 1px black;
+            background-color: rgb(184, 176, 176);
+            border: 2px solid;
+            box-shadow: inset 0 2px rgba(102, 98, 98, 0.3), inset 0 10px rgba(255, 255, 255, .2), inset 0 10px 20px rgba(255, 255, 255, .25), inset 0 -15px 30px rgba(255, 255, 255, .3);
+            color: limegreen;
+            opacity: 0.4;
+        }
+    }
+    /* ///////////////-------------NEXUS 5X------/////////////// */
+    
+    @media screen and (max-width: 414px) and ( min-width: 273px) {
+        .container {
+            min-width: 99.9%;
+            min-height: 99.9%;
+            border: none;
+            box-shadow: none;
+            grid-template-areas: " hd  hd hd" " ar ar ar ar" "wk wk wk wk " "ft ft ft ft ";
+        }
+        .container>* {
+            width: 99.9%;
+        }
+        header {
+            grid-area: hd;
+            border: 1px solid #333;
+            background: rgba(03, 03, 03, 0.5)url("./images/portfoliobg.jpg");
+            background-size: cover;
+            margin-top: 10px !important;
+            width: 100%;
+            height: 13.75rem;
+            text-align: center;
+            text-shadow: 2px 1px lawngreen;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .navbar {
+            text-align: center;
+            padding: 5px;
+            color: #333;
+            width: 85%;
+            margin: -8.125rem auto;
+        }
+        .centered2 {
+            position: relative;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(241, 248, 241);
+            letter-spacing: 0.1em;
+        }
+        .showcase {
+            margin-top: 250px !important;
+            grid-template-areas: "b1" "b2" "b3" "b4""b5";
+            grid-gap: 1px;
+        }
+        .workbox {
+            height: 300px;
+            margin: 15px 0 20px 0;
+        }
+        article {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas: "p1" "p2";
+        }
+        .info {
+            height: 200px;
+            margin-top: 15px;
+        }
+        .size {
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            object-position: center center;
+        }
+        #b5 {
+            cursor: pointer;
+            max-height: 100px !important;
+            width: 100%;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 1px black;
+            background-color: rgb(184, 176, 176);
+            border: 2px solid;
+            box-shadow: inset 0 2px rgba(102, 98, 98, 0.3), inset 0 10px rgba(255, 255, 255, .2), inset 0 10px 20px rgba(255, 255, 255, .25), inset 0 -15px 30px rgba(255, 255, 255, .3);
+            color: limegreen;
+            opacity: 0.4;
+        }
+    }
+    
+    .footer {
+        grid-area: ft;
+        cursor: pointer;
+        max-height: 80px !important;
+        width: 96%;
+        margin-top: 50px !important;
+        text-shadow: 1px 1px 1px black;
+        background-color: rgb(184, 176, 176);
+        border: 2px solid;
+        box-shadow: inset 0 2px rgba(102, 98, 98, 0.3), inset 0 10px rgba(255, 255, 255, .2), inset 0 10px 20px rgba(255, 255, 255, .25), inset 0 -15px 30px rgba(255, 255, 255, .3);
+        color: limegreen;
+        opacity: 0.9;
+    }
+    /* //////////////logo for small devices////////////// */
+    
+    @media screen and (max-width: 500px) {
+        .logo {
+            margin-left: 0;
+            position: relative;
+            left: 5%;
+            transform: translate(-55%, -60%);
+            font-size: 3em;
+        }
+        .navbar .btn {
+            /* font-size: 50%; */
+            /* margin-left: 0; */
+            /* position: relative; */
+            /* left: 5%; */
+            transform: translate(-80%, 0);
+            font-size: 3em;
+        }
+        .navbar .btn {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: inline-block;
+            font-size: 16px;
+            color: #f9f0eb;
+            border: 1px solid;
+            padding: 8px 12px;
+            margin: left 5px;
+        }
+    }

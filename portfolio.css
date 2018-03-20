@@ -398,7 +398,7 @@
         }
         .workbox {
             height: 300px;
-            margin: 15px 0 20px 0;
+            margin: 15px 0 10px 0;
         }
         article {
             display: grid;
@@ -434,7 +434,7 @@
         cursor: pointer;
         max-height: 80px !important;
         width: 96%;
-        margin-top: 50px !important;
+        margin-top: 30px !important;
         text-shadow: 1px 1px 1px black;
         background-color: rgb(184, 176, 176);
         border: 2px solid;
